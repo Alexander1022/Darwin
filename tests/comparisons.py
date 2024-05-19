@@ -9,16 +9,16 @@ class TestComparisons(unittest.TestCase):
         s1 = 'Здравей'
         s2 = 'Здравей'
 
-        spacy_similarity = SpacySimilarity(s1, s2)
-        similarity = spacy_similarity.compare()
+        ss = SpacySimilarity()
+        similarity = ss.compare(s1, s2)
         self.assertEqual(similarity, 1.0)
 
     def test_LevenshteinDistance(self):
         s1 = 'Зиги'
         s2 = 'Зигота'
 
-        levenshtein_distance = LevenshteinDistance(s1, s2)
-        similarity = levenshtein_distance.compare()
+        ld = LevenshteinDistance()
+        similarity = ld.compare(s1, s2)
         self.assertEqual(similarity, 0.6)
 
 if __name__ == '__main__':
