@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../')
-from darwin.comparisons import SpacySimilarity, LevenshteinDistance
+from darwin.comparisons import SpacySimilarity, LevenshteinDistance, DiceSorensen
 import unittest
 
 class TestComparisons(unittest.TestCase):
@@ -20,6 +20,15 @@ class TestComparisons(unittest.TestCase):
         ld = LevenshteinDistance()
         similarity = ld.compare(s1, s2)
         self.assertEqual(similarity, 0.6)
+
+    def test_DiceMethod(self):
+        s1 = 'България е част от Европа'
+        s2 = 'България е в Европа'
+
+        ds = DiceSorensen()
+        similarity = ds.compare(s1, s2)
+        self.assertAlmostEqual(similarity, 0.6667, places=4)
+
 
 if __name__ == '__main__':
     unittest.main()

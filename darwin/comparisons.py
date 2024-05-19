@@ -33,3 +33,20 @@ class SpacySimilarity:
         similarity = doc1.similarity(doc2)
 
         return similarity
+
+# https://en.wikipedia.org/wiki/Dice-S%C3%B8rensen_coefficient
+class DiceSorensen:
+    def __init__(self, language = 'BG'):
+        self.language = language
+
+    def compare(self, s1, s2):
+        if not s1 or not s2:
+            return 0
+
+        s1 = set(s1.split())
+        s2 = set(s2.split())
+
+        intersection = len(s1.intersection(s2))
+        dice = (2 * intersection) / (len(s1) + len(s2))
+
+        return dice
