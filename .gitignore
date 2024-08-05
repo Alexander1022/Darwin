@@ -1,2 +1,4 @@
 __pycache__
 bg_news_lg
+*.pkl
+*.h5
