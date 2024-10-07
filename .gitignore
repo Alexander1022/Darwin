@@ -3,3 +3,4 @@ bg_news_lg
 *.pkl
 *.h5
 .DS_Store
+darwin/.env
