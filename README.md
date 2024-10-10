@@ -21,3 +21,7 @@ In the future, the project will incorporate [simplemma](https://github.com/adbar
 The current recommended way to install Darwin is from source.
 
 The aim is to be a fully working Python package.
+
+## License
+
+This project is licensed under the Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. You are free to share, copy, and adapt the material as long as you give appropriate credit, but it cannot be used for commercial purposes.
