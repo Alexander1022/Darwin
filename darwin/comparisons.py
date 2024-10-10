@@ -1,5 +1,4 @@
 import difflib
-import spacy
 
 class LevenshteinDistance:
     def __init__(self, language = 'BG'):
@@ -18,6 +17,7 @@ class LevenshteinDistance:
         return percent
 
 class SpacySimilarity:
+    import spacy
     # using the bulgarian Spacy model created by Ivaylo Sakelariev
     def __init__(self, language = 'bg_news_lg'):
         self.language = language
