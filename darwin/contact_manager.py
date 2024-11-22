@@ -3,7 +3,7 @@ import csv
 from comparisons import LevenshteinDistance
 
 class ContactManager:
-    def __init__(self, filename='contacts.csv'):
+    def __init__(self, filename='../contacts.csv'):
         self.filename = filename
         self.levenshtein = LevenshteinDistance()
 

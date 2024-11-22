@@ -6,3 +6,4 @@ simplemma
 spacy
 tensorflow
 tensorflow_intel
+pyyaml
